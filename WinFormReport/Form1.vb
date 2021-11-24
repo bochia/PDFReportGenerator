@@ -12,12 +12,12 @@ Public Class Form1
                                                   currentDirectory,
                                                   outputFolderPath)
         reportGenerator.GeneratePdf()
-        MsgBox("Kitting Station Report Has Been Generated")
+        MessageBox.Show($"PDF report has been generated at the following location: {Environment.NewLine}{Environment.NewLine}{outputFolderPath}", "Info", MessageBoxButtons.OK)
         Dim pdfPath = reportGenerator.PdfOutputPath
 
-        Dim reportPrinter = New ReportPrinter(pdfPath)
+        'Dim reportPrinter = New ReportPrinter(pdfPath)
         'reportPrinter.Print()
-        MsgBox("Report Printed Succesfully!")
+        'MsgBox("Report Printed Succesfully!")
 
     End Sub
 End Class
